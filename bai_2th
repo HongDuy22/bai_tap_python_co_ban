@@ -1,0 +1,11 @@
+n = int(input("hãy nhập một số nguyên: "))
+if n > 0:
+    print(f"{n} là số nguyên dương ")
+elif n < 0:
+    print(f"{n} là số nguyên âm ")
+else:
+    print("0")
+if n % 2==0:
+    print(f"{n} là số chẳn")
+else:
+    print(f"{n} là số lẻ ")
