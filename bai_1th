@@ -1,0 +1,8 @@
+name = input("hãy nhập tên sản phẩm: ")
+r = float(input("hãy chiều rộng của sản phẩm: "))
+d = float(input("hãy nhập chiều dài của sản phẩm: "))
+s = d * r
+cv = (d+r) *2
+print(name)
+print("diện tích của sản phẩm là: ",s)
+print("chu vi của sản phẩm là: ",cv)
