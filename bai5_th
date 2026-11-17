@@ -1,0 +1,30 @@
+n = int(input("hãy nhập số lượng mặt hàng: "))
+ds=[]
+while n < 1 or n > 20:
+    n = int(input("bạn đã nhập sai số lượng mặt hàng mời bạn nhập lại từ (1-20): "))
+for i in range (1,n+1):
+    ten = input(f"hãy nhập tên mặt hàng thứ {i}: ")
+    don_gia =float(input(f"hãy nhập đơn giá thứ {i}: "))
+    while don_gia < 0:
+        don_gia = float(input(f"hãy nhập lại đơn giá thứ {i}: "))
+    so_luong_ton_kho = int(input(f"hãy nhập số lượng tồn kho của đơn hàng thứ {i}: "))
+    while so_luong_ton_kho < 0:
+        so_luong_ton_kho = int(input(f"hãy nhập lại số lượng tồn kho của đơn hàng thứ {i}: "))
+    ds.append([ten,don_gia,so_luong_ton_kho])
+def gia_tri_ton_kho(don_gia,so_luong_ton_kho):
+    tich = don_gia * so_luong_ton_kho
+    return tich 
+
+tong=0
+dem=0
+for ten,don_gia, so_luong_ton_kho in ds:
+        print(f"Tên mặt hàng là:{ten} Giá trị đơn hàng là:{gia_tri_ton_kho(don_gia,so_luong_ton_kho):.0f}")
+        tong = tong+gia_tri_ton_kho(don_gia,so_luong_ton_kho)
+        if so_luong_ton_kho < 5:
+            dem=dem+1
+            print(f"{ten} là mặt hàng có số lượng tồn kho dưới 5")
+            
+print(f"tổng giá trị của các mặt hàng là {tong}")
+print(f"Số lượng mặt hàng tồn kho dưới 5 là {dem}")
+
+
